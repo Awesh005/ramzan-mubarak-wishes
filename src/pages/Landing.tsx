@@ -1,9 +1,10 @@
-import React from 'react';
+import * as React from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { Moon } from '../components/Moon';
 import { ArrowRight, Sparkles, MessageSquareHeart, Calendar as CalendarIcon } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const Landing: React.FC = () => {
   const navigate = useNavigate();
@@ -24,7 +25,7 @@ export const Landing: React.FC = () => {
     visible: {
       y: 0,
       opacity: 1,
-      transition: { duration: 0.8, ease: "easeOut" }
+      transition: { duration: 0.8, ease: "easeOut" as const }
     }
   };
 
@@ -35,6 +36,19 @@ export const Landing: React.FC = () => {
       initial="hidden"
       animate="visible"
     >
+      <SEO 
+        title="Ramzan Mubarak 2026"
+        description="Celebrate Ramadan 2026 with our premium web app. Create elegant personalized wishes and track live prayer times with our integrated calendar."
+        structuredData={{
+          "@context": "https://schema.org",
+          "@type": "ReligiousHoliday",
+          "name": "Ramadan 2026",
+          "alternateName": "Ramzan Mubarak",
+          "startDate": "2026-02-18",
+          "endDate": "2026-03-20",
+          "description": "The holy month of Ramadan for the year 2026."
+        }}
+      />
       {/* Decorative Moon Section */}
       <motion.div variants={itemVariants} className="relative mb-8 md:mb-12">
         <div className="absolute -inset-10 bg-gold-500/20 rounded-full blur-3xl animate-pulse-glow" />

@@ -1,9 +1,11 @@
-import React, { useState } from 'react';
+import * as React from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
 import { Button } from '../components/Button';
 import { WishStyle } from '../types';
 import { Sparkles, ArrowLeft } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 export const Generator: React.FC = () => {
   const navigate = useNavigate();
@@ -38,6 +40,10 @@ export const Generator: React.FC = () => {
       exit={{ opacity: 0, scale: 0.95 }}
       className="w-full max-w-lg mx-auto"
     >
+      <SEO 
+        title="Create Your Ramzan Wish"
+        description="Write a personalized Ramadan greeting with our elegant generator. Choose your style and share the blessings with family and friends."
+      />
       <div className="bg-white/5 backdrop-blur-2xl border border-white/10 rounded-[2.5rem] p-8 md:p-12 shadow-2xl relative overflow-hidden">
         {/* Glow decoration */}
         <div className="absolute -top-40 -right-40 w-80 h-80 bg-gold-500/10 rounded-full blur-[100px] pointer-events-none" />

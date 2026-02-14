@@ -1,4 +1,5 @@
-import React, { useRef, useState, useEffect } from 'react';
+import * as React from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useSearchParams, useNavigate } from 'react-router-dom';
 import { WishData, WishStyle } from '../types';
@@ -6,6 +7,7 @@ import { WISH_TEMPLATES } from '../constants';
 import { Button } from '../components/Button';
 import { Share2, Copy, Check, MessageCircle, Home, ArrowLeft } from 'lucide-react';
 import { getBaseUrl, shareContent, shareToWhatsApp, copyToClipboard } from '../utils/share';
+import { SEO } from '../components/SEO';
 
 export const WishDisplay: React.FC = () => {
   const [searchParams] = useSearchParams();
@@ -65,6 +67,10 @@ export const WishDisplay: React.FC = () => {
 
   return (
     <div className="flex flex-col items-center w-full max-w-2xl mx-auto px-4">
+      <SEO 
+        title={`Ramadan Wish from ${sender}`}
+        description={`See this special Ramadan message from ${sender}. Ramzan Mubarak to you and your family!`}
+      />
       <motion.div
         initial={{ opacity: 0, scale: 0.95, y: 30 }}
         animate={{ opacity: 1, scale: 1, y: 0 }}

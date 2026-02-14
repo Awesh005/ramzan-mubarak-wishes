@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import * as React from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar as CalendarIcon, MapPin, Loader2, Search, Navigation, Sunrise, Sunset, Clock, Moon } from 'lucide-react';
+import { SEO } from '../components/SEO';
 
 // Prayer times interface
 interface PrayerTimes {
@@ -166,6 +168,10 @@ export const CalendarView: React.FC = () => {
       animate={{ opacity: 1 }} 
       className="w-full max-w-6xl mx-auto px-4 py-12"
     >
+      <SEO 
+        title={`Ramadan Calendar 2026 - ${locationName === 'Detecting...' ? '' : locationName}`}
+        description={`View the 2026 Ramadan calendar for ${locationName}. Track Sehri and Iftar times with our premium live prayer tracker.`}
+      />
       <div className="flex flex-col items-center mb-12">
         <motion.div 
           animate={{ rotate: [0, 10, -10, 0] }}

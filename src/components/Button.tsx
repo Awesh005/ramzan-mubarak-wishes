@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { motion, HTMLMotionProps } from 'framer-motion';
 
 interface ButtonProps extends Omit<HTMLMotionProps<"button">, "children"> {

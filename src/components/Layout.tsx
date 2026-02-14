@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 import { Lantern } from './Lantern';
 import { Star } from './Star';
 import { useLocation } from 'react-router-dom';
@@ -52,7 +52,7 @@ export const Layout: React.FC<LayoutProps> = ({ children }) => {
                           text-emerald-400/60
                           font-sans text-sm relative z-20 mt-auto">
           <p className="flex items-center justify-center gap-2">
-            Made with <span className="text-red-500 animate-pulse">❤️</span> for Ramadan 2026
+            Made with <span className="text-red-500 animate-pulse">❤️</span> by Md Awesh for Ramadan 2026
           </p>
         </footer>
       </main>
