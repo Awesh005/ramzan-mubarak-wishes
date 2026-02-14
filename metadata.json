@@ -1,0 +1,7 @@
+{
+  "name": "Ramzan Mubarak Wishes",
+  "description": "A premium, aesthetic web application to generate and share personalized Ramadan Mubarak wishes for 2026.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
