@@ -13,9 +13,9 @@ interface PrayerTimes {
 // Fasting status type
 type FastingStatus = 'sehri' | 'fasting' | 'iftar';
 
-// Helper to generate dates (Starting Feb 18, 2026)
+// Helper to generate dates (Starting Feb 19, 2026)
 const generateCalendarData = () => {
-  const startDate = new Date('2026-02-18');
+  const startDate = new Date('2026-02-19');
   return Array.from({ length: 30 }, (_, i) => {
     const date = new Date(startDate);
     date.setDate(startDate.getDate() + i);
